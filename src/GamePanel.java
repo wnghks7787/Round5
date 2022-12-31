@@ -12,7 +12,7 @@ public class GamePanel extends JPanel implements MouseListener {
     static final int WHITE = 2;
 
     // 돌 저장하는 배열
-    int[][] stones = new int[8][8];     // [x][y]
+    static int[][] stones = new int[8][8];     // [y][x]
 
     // 흑백 플레이 순서
     static boolean myTern = false;      // black == false, white == true
@@ -44,14 +44,14 @@ public class GamePanel extends JPanel implements MouseListener {
         setLayout(null);
         addMouseListener(this);
 
-        for(int i = 0 ; i < 8 ; i++)
+        for(int y = 0 ; y < 8 ; y++)
         {
-            for(int j = 0 ; j < 8 ; j++)
+            for(int x = 0 ; x < 8 ; x++)
             {
-                if((i == 3 && j == 3) || (i == 4 && j == 4))
-                    stones[i][j] = WHITE;
-                else if((i == 3 && j == 4) || (i == 4 && j == 3))
-                    stones[i][j] = BLACK;
+                if((x == 3 && y == 3) || (x == 4 && y == 4))
+                    stones[y][x] = WHITE;
+                else if((x == 4 && y == 3) || (x == 3 && y == 4))
+                    stones[y][x] = BLACK;
             }
         }
     }
@@ -96,10 +96,11 @@ public class GamePanel extends JPanel implements MouseListener {
 
         int x = e.getX() / CHECK_SIZE;
         int y = e.getY() / CHECK_SIZE;
+        System.out.println(Check.check_x_left(x, y));
 
-        if(!myTern && stones[y][x] == 0)
+        if(!myTern && stones[y][x] == 0 && Check.check_x_left(x, y))
             stones[y][x] = 1;
-        else if(stones[y][x] == 0)
+        else if(stones[y][x] == 0 && Check.check_x_left(x, y))
             stones[y][x] = 2;
         else
             return;
