@@ -9,6 +9,8 @@ public class GamePanel extends JPanel {
     static final int BLACK = 1;
     static final int WHITE = -1;
 
+    Color squareColor = new Color(176, 176, 176);
+
     // 돌 저장하는 배열
     static int[][] stones = new int[8][8];     // [y][x]
 
@@ -54,7 +56,7 @@ public class GamePanel extends JPanel {
         {
             for(int j = 0 ; j < 8 ; j++)
             {
-                g.setColor(new Color(176, 176, 176));
+                g.setColor(squareColor);
                 if(i % 2 == 0 && j % 2 != 0)
                     g.fillRect(i * CHECK_SIZE, j * CHECK_SIZE, CHECK_SIZE, CHECK_SIZE);
                 else if(i % 2 != 0 && j % 2 == 0)

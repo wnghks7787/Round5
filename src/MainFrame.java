@@ -10,6 +10,7 @@ public class MainFrame extends JFrame implements MouseListener {
     GamePanel gamePanel;
     ResultFrame resultFrame;
     JButton resetBtn;
+    JButton[] themeBtn = new JButton[2];
 
     public static int whiteCnt = 0;
     public static int blackCnt = 0;
@@ -31,6 +32,7 @@ public class MainFrame extends JFrame implements MouseListener {
         setLocationRelativeTo(null);
 
         addResetButton();
+        addThemeButton();
 
         gamePanel.addMouseListener(this);
     }
@@ -161,14 +163,43 @@ public class MainFrame extends JFrame implements MouseListener {
 
         menuPanel.add(resetBtn);
 
-
-        resetBtn.setBounds(30, 400, 140, 70);
+        resetBtn.setFont(resetBtn.getFont().deriveFont(20.0f));
+        resetBtn.setBounds(30, 550, 140, 70);
 
         resetBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 resultFrame.textLabel.setText("Are you want to restart?");
                 resultFrame.setVisible(true);
+            }
+        });
+    }
+
+    void addThemeButton()
+    {
+        for(int i = 0 ; i < 2 ; i++)
+        {
+            themeBtn[i] = new JButton("Theme" + i);
+
+            menuPanel.add(themeBtn[i]);
+
+            themeBtn[i].setFont(themeBtn[i].getFont().deriveFont(20.0f));
+            themeBtn[i].setBounds(30, 300 + i * 100, 140, 70);
+        }
+
+        themeBtn[0].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                gamePanel.setBackground(new Color(65, 121, 27));
+                gamePanel.squareColor = new Color(176, 176, 176);
+            }
+        });
+
+        themeBtn[1].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                gamePanel.setBackground(new Color(133, 69, 49));
+                gamePanel.squareColor = new Color(176, 176, 176);
             }
         });
     }
