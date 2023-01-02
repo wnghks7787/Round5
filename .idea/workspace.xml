@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f8d9fb3-d68a-4537-ba96-306e9d3a4096" name="Changes" comment="finish game function">
-      <change afterPath="$PROJECT_DIR$/assets/green.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WinFrame.java" afterDir="false" />
+    <list default="true" id="9f8d9fb3-d68a-4537-ba96-306e9d3a4096" name="Changes" comment="finish basic menu">
+      <change afterPath="$PROJECT_DIR$/src/ResultFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Check.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Check.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MenuPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WinFrame.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +71,7 @@
       <workItem from="1672455515292" duration="13787000" />
       <workItem from="1672474510199" duration="9251000" />
       <workItem from="1672550045988" duration="39281000" />
-      <workItem from="1672646093531" duration="800000" />
+      <workItem from="1672646093531" duration="4359000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1672457450138</created>
@@ -104,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672618065163</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="finish basic menu">
+      <created>1672647154563</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1672647154563</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +130,7 @@
     <MESSAGE value="basic function" />
     <MESSAGE value="x-left check" />
     <MESSAGE value="finish game function" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish game function" />
+    <MESSAGE value="finish basic menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish basic menu" />
   </component>
 </project>

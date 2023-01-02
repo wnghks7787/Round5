@@ -8,18 +8,24 @@ import java.awt.event.MouseListener;
 public class MainFrame extends JFrame implements MouseListener {
     MenuPanel menuPanel;
     GamePanel gamePanel;
+    ResultFrame resultFrame;
 
     boolean passCheck = false;
 
     JButton resetBtn;
+
+    public static int whiteCnt = 0;
+    public static int blackCnt = 0;
     public MainFrame()
     {
         getContentPane().setBackground(new Color(103, 92, 92));
         setSize(900, 700);
         menuPanel = new MenuPanel();
         gamePanel = new GamePanel();
+        resultFrame = new ResultFrame(this);
         add(menuPanel);
         add(gamePanel);
+
 
         setLayout(null);
         setVisible(true);
@@ -71,20 +77,28 @@ public class MainFrame extends JFrame implements MouseListener {
 
             repaint();
 
-            int whiteStone = 0, blackStone = 0;
+            blackCnt = 0;
+            whiteCnt = 0;
             for(int i = 0 ; i < 8 ; i++)
             {
                 for(int j = 0 ; j < 8 ; j++)
                 {
                     if(GamePanel.stones[i][j] == 1)
-                        blackStone++;
+                        blackCnt++;
                     else if(GamePanel.stones[i][j] == -1)
-                        whiteStone++;
+                        whiteCnt++;
                 }
             }
 
-            menuPanel.blackInt.setText(String.valueOf(blackStone));
-            menuPanel.whiteInt.setText(String.valueOf(whiteStone));
+            menuPanel.blackInt.setText(String.valueOf(blackCnt));
+            menuPanel.whiteInt.setText(String.valueOf(whiteCnt));
+
+            if(MainFrame.whiteCnt > MainFrame.blackCnt)
+                resultFrame.textLabel.setText("White WIN!!");
+            else if(MainFrame.whiteCnt < MainFrame.blackCnt)
+                resultFrame.textLabel.setText("Black WIN!!");
+            else
+                resultFrame.textLabel.setText("DRAW!!");
 
             GamePanel.myTurn = !GamePanel.myTurn;
 
@@ -160,7 +174,8 @@ public class MainFrame extends JFrame implements MouseListener {
         resetBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                reset();
+                resultFrame.textLabel.setText("Are you want to restart?");
+                resultFrame.setVisible(true);
             }
         });
 
