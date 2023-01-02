@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f8d9fb3-d68a-4537-ba96-306e9d3a4096" name="Changes" comment="add reset button">
+    <list default="true" id="9f8d9fb3-d68a-4537-ba96-306e9d3a4096" name="Changes" comment="Ver1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Check.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Check.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +69,9 @@
       <workItem from="1672455515292" duration="13787000" />
       <workItem from="1672474510199" duration="9251000" />
       <workItem from="1672550045988" duration="39281000" />
-      <workItem from="1672646093531" duration="10614000" />
+      <workItem from="1672646093531" duration="11352000" />
+      <workItem from="1672676447269" duration="136000" />
+      <workItem from="1672676633030" duration="573000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1672457450138</created>
@@ -114,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672653899890</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Ver1">
+      <created>1672666020457</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1672666020457</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +146,7 @@
     <MESSAGE value="finish game function" />
     <MESSAGE value="finish basic menu" />
     <MESSAGE value="add reset button" />
-    <option name="LAST_COMMIT_MESSAGE" value="add reset button" />
+    <MESSAGE value="Ver1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ver1" />
   </component>
 </project>

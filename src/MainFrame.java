@@ -177,5 +177,12 @@ public class MainFrame extends JFrame implements MouseListener {
     {
         if(!check.emptyCheck(color))
             resultFrame.setVisible(true);
+        else
+        {
+            if(color == -1)
+                JOptionPane.showMessageDialog(null, "Black can't move!", "Pass", JOptionPane.WARNING_MESSAGE);
+            else
+                JOptionPane.showMessageDialog(null, "White can't move!", "Pass", JOptionPane.WARNING_MESSAGE);
+        }
     }
 }
