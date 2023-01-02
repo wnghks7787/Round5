@@ -13,7 +13,7 @@ public class GamePanel extends JPanel {
     static int[][] stones = new int[8][8];     // [y][x]
 
     // 흑백 플레이 순서
-    static boolean myTern = false;      // black == false, white == true
+    static boolean myTurn = false;      // black == false, white == true
 
     // 이미지 이쁘게 출력하기
     ImageIcon whiteIcon = new ImageIcon("assets/white.png");

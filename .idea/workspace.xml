@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f8d9fb3-d68a-4537-ba96-306e9d3a4096" name="Changes" comment="x-left check">
+    <list default="true" id="9f8d9fb3-d68a-4537-ba96-306e9d3a4096" name="Changes" comment="finish game function">
+      <change afterPath="$PROJECT_DIR$/assets/green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WinFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Check.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Check.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePanel.java" afterDir="false" />
@@ -47,6 +49,11 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -66,7 +73,8 @@
       <updated>1672455513455</updated>
       <workItem from="1672455515292" duration="13787000" />
       <workItem from="1672474510199" duration="9251000" />
-      <workItem from="1672550045988" duration="17648000" />
+      <workItem from="1672550045988" duration="39281000" />
+      <workItem from="1672646093531" duration="800000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1672457450138</created>
@@ -89,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672492515169</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="finish game function">
+      <created>1672618065163</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672618065163</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +125,7 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="basic function" />
     <MESSAGE value="x-left check" />
-    <option name="LAST_COMMIT_MESSAGE" value="x-left check" />
+    <MESSAGE value="finish game function" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish game function" />
   </component>
 </project>
