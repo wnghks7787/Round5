@@ -9,9 +9,6 @@ public class MainFrame extends JFrame implements MouseListener {
     MenuPanel menuPanel;
     GamePanel gamePanel;
     ResultFrame resultFrame;
-
-    boolean passCheck = false;
-
     JButton resetBtn;
 
     public static int whiteCnt = 0;
@@ -57,10 +54,6 @@ public class MainFrame extends JFrame implements MouseListener {
         int pressY = e.getY() / GamePanel.CHECK_SIZE;
         if(x == pressX && y == pressY)
         {
-//            System.out.println("x좌표 : " + e.getX() / GamePanel.CHECK_SIZE + " y좌표 : " + e.getY() / GamePanel.CHECK_SIZE);
-
-
-
             int color;
 
             if(GamePanel.myTurn)
@@ -101,19 +94,19 @@ public class MainFrame extends JFrame implements MouseListener {
                 resultFrame.textLabel.setText("DRAW!!");
 
             GamePanel.myTurn = !GamePanel.myTurn;
+            if(GamePanel.myTurn)
+                color = GamePanel.WHITE;
+            else
+                color = GamePanel.BLACK;
 
 //            boolean empty = check.emptyCheck();
-            if(!check.emptyCheck()) {
-                if(passCheck) {
-                    passCheck = false;
-                    System.out.println("게임 종료");
-                }
-                else {
-                    System.out.println("둘 수 있는 곳이 없습니다.");
-//                    GamePanel.myTurn = !GamePanel.myTurn;
-                    passCheck = true;
-                    return;
-                }
+            if(!check.emptyCheck(color)) {
+                System.out.println("PASS");
+                GamePanel.myTurn = !GamePanel.myTurn;
+
+                color *= -1;
+
+                passChecking(check, color);
             }
 
             if(GamePanel.myTurn)
@@ -169,7 +162,7 @@ public class MainFrame extends JFrame implements MouseListener {
         menuPanel.add(resetBtn);
 
 
-        resetBtn.setBounds(30, 400, 70, 70);
+        resetBtn.setBounds(30, 400, 140, 70);
 
         resetBtn.addActionListener(new ActionListener() {
             @Override
@@ -178,21 +171,11 @@ public class MainFrame extends JFrame implements MouseListener {
                 resultFrame.setVisible(true);
             }
         });
-
     }
 
-//    public boolean passChecking(Check check)
-//    {
-//        if(!check.emptyCheck()) {
-//            if(passCheck) {
-//                passCheck = false;
-//                System.out.println("게임 종료");
-//            }
-//            else {
-//                System.out.println("둘 수 있는 곳이 없습니다.");
-////                    GamePanel.myTurn = !GamePanel.myTurn;
-//                passCheck = true;
-//            }
-//        }
-//    }
+    public void passChecking(Check check, int color)
+    {
+        if(!check.emptyCheck(color))
+            resultFrame.setVisible(true);
+    }
 }

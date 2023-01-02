@@ -310,9 +310,10 @@ public class Check {
         }
     }
 
-    public boolean emptyCheck()
+    public boolean emptyCheck(int myColor)
     {
         boolean[] checkLocation = new boolean[8];
+        this.color = myColor;
 
         for(int y1 = 0 ; y1 < 8 ; y1++)
         {
