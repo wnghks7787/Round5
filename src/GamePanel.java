@@ -1,15 +1,13 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 
-public class GamePanel extends JPanel implements MouseListener {
+public class GamePanel extends JPanel {
 
     // 각종 상수들
     static final int CHECK_SIZE = 75;
     static final int STONE_SIZE = 55;
     static final int BLACK = 1;
-    static final int WHITE = 2;
+    static final int WHITE = -1;
 
     // 돌 저장하는 배열
     static int[][] stones = new int[8][8];     // [y][x]
@@ -22,6 +20,9 @@ public class GamePanel extends JPanel implements MouseListener {
     ImageIcon blackIcon = new ImageIcon("assets/black.png");
     Image whiteImageResize, blackImageResize;
 
+    // Press 할 때 사용할 위치좌표
+    Point clickPoint = new Point();
+
     public GamePanel()
     {
         // 이미지 불러오기
@@ -30,19 +31,7 @@ public class GamePanel extends JPanel implements MouseListener {
         setBounds(50, 50, 600, 600);
         setBackground(new Color(133, 69, 49));
 
-        JLabel myLabel = new JLabel();
-        add(myLabel);
-
-        ImageIcon icon = new ImageIcon("assets/white.png");
-        Image image = icon.getImage();
-        Image image2 = image.getScaledInstance(STONE_SIZE, STONE_SIZE, Image.SCALE_SMOOTH);
-        icon = new ImageIcon(image2);
-
-        myLabel.setIcon(icon);
-        myLabel.setBounds(CHECK_SIZE + 10, CHECK_SIZE + 10, STONE_SIZE, STONE_SIZE);
-
         setLayout(null);
-        addMouseListener(this);
 
         for(int y = 0 ; y < 8 ; y++)
         {
@@ -80,52 +69,12 @@ public class GamePanel extends JPanel implements MouseListener {
             {
                 switch (stones[y][x]) {
                     case 1 -> g.drawImage(blackImageResize, x * CHECK_SIZE + 10, y * CHECK_SIZE + 10, this);
-                    case 2 -> g.drawImage(whiteImageResize, x * CHECK_SIZE + 10, y * CHECK_SIZE + 10, this);
+                    case -1 -> g.drawImage(whiteImageResize, x * CHECK_SIZE + 10, y * CHECK_SIZE + 10, this);
                     default -> {
                     }
                 }
             }
         }
-
-    }
-
-
-    @Override
-    public void mouseClicked(MouseEvent e) {
-        System.out.println("x좌표 : " + e.getX() / CHECK_SIZE + " y좌표 : " + e.getY() / CHECK_SIZE);
-
-        int x = e.getX() / CHECK_SIZE;
-        int y = e.getY() / CHECK_SIZE;
-        System.out.println(Check.check_x_left(x, y));
-
-        if(!myTern && stones[y][x] == 0 && Check.check_x_left(x, y))
-            stones[y][x] = 1;
-        else if(stones[y][x] == 0 && Check.check_x_left(x, y))
-            stones[y][x] = 2;
-        else
-            return;
-
-        myTern = !myTern;
-        repaint();
-    }
-
-    @Override
-    public void mousePressed(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseEntered(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseExited(MouseEvent e) {
 
     }
 
@@ -140,4 +89,5 @@ public class GamePanel extends JPanel implements MouseListener {
         whiteIcon = new ImageIcon(whiteImageResize);
         blackIcon = new ImageIcon(blackImageResize);
     }
+
 }
