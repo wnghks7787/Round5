@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f8d9fb3-d68a-4537-ba96-306e9d3a4096" name="Changes" comment="Ver2">
+    <list default="true" id="9f8d9fb3-d68a-4537-ba96-306e9d3a4096" name="Changes" comment="add theme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +71,7 @@
       <workItem from="1672550045988" duration="39281000" />
       <workItem from="1672646093531" duration="11352000" />
       <workItem from="1672676447269" duration="136000" />
-      <workItem from="1672676633030" duration="1478000" />
+      <workItem from="1672676633030" duration="2621000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1672457450138</created>
@@ -130,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672677327113</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add theme">
+      <created>1672678122402</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1672678122402</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +162,7 @@
     <MESSAGE value="add reset button" />
     <MESSAGE value="Ver1" />
     <MESSAGE value="Ver2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ver2" />
+    <MESSAGE value="add theme" />
+    <option name="LAST_COMMIT_MESSAGE" value="add theme" />
   </component>
 </project>

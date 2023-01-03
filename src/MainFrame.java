@@ -10,7 +10,7 @@ public class MainFrame extends JFrame implements MouseListener {
     GamePanel gamePanel;
     ResultFrame resultFrame;
     JButton resetBtn;
-    JButton[] themeBtn = new JButton[2];
+    JButton[] themeBtn = new JButton[3];
 
     public static int whiteCnt = 0;
     public static int blackCnt = 0;
@@ -177,14 +177,14 @@ public class MainFrame extends JFrame implements MouseListener {
 
     void addThemeButton()
     {
-        for(int i = 0 ; i < 2 ; i++)
+        for(int i = 0 ; i < 3 ; i++)
         {
             themeBtn[i] = new JButton("Theme" + i);
 
             menuPanel.add(themeBtn[i]);
 
             themeBtn[i].setFont(themeBtn[i].getFont().deriveFont(20.0f));
-            themeBtn[i].setBounds(30, 300 + i * 100, 140, 70);
+            themeBtn[i].setBounds(30, 250 + i * 70, 140, 50);
         }
 
         themeBtn[0].addActionListener(new ActionListener() {
@@ -192,6 +192,7 @@ public class MainFrame extends JFrame implements MouseListener {
             public void actionPerformed(ActionEvent e) {
                 gamePanel.setBackground(new Color(65, 121, 27));
                 gamePanel.squareColor = new Color(176, 176, 176);
+                gamePanel.repaint();
             }
         });
 
@@ -200,6 +201,16 @@ public class MainFrame extends JFrame implements MouseListener {
             public void actionPerformed(ActionEvent e) {
                 gamePanel.setBackground(new Color(133, 69, 49));
                 gamePanel.squareColor = new Color(176, 176, 176);
+                gamePanel.repaint();
+            }
+        });
+
+        themeBtn[2].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                gamePanel.setBackground(new Color(217, 212, 212));
+                gamePanel.squareColor = new Color(164, 116, 74);
+                gamePanel.repaint();
             }
         });
     }
